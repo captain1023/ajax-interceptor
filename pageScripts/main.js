@@ -154,7 +154,8 @@ let ajax_interceptor_qoweifjqon = {
 
 window.addEventListener("message", function(event) {
   const data = event.data;
-
+  console.log('123')
+  this.window.test=1
   if (data.type === 'ajaxInterceptor' && data.to === 'pageScript') {
     ajax_interceptor_qoweifjqon.settings[data.key] = data.value;
   }
